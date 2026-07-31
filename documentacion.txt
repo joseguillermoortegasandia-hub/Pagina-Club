@@ -1,0 +1,36 @@
+Este proyecto va a ser una pagina web en la cual el club el cual desee obtener la pagina va a 
+poder disfrutar de:
+
+-En su pagina principal va a tener informacion variada de las multiples actividades
+de la semana y del mes y alguna notica la cual le sea de interes al socio 
+
+Esta pagina contara con varias secciones como:
+
+- Una seccion de deportes la cual se va a dividir entre los distintos deportes que tenga 
+el club en sus instalaciones, cada uno de los deportes va a tener su tabla de posiciones, su 
+escalofon completo, se intentara la implementacion de la visualizacion de los mismos mediante
+esta misma pagina, resultados antiguos contra el rival que decida el socio, va a acceso a 
+ver los roster de los otros equipos, todo esto en cuanto las secciones que van por torneos largos
+que requieren todo este tipo de informacion. Ahora entrando en torneos deportivos que 
+sean eventuales en esas secciones se puede suministrar es como quedo ese torneo, o como se van
+consolidando ya eso depende de la informacion que el deporte demande. 
+
+-Una seccion de noticias mas relevantes (esta seccion puede que no la incluya)
+
+-Todas estas secciones las va a manejar tanto como administracion como cada uno de los presidentes
+de las respectiva ligas o bueno eso desde un principio ya que se podria adaptar a lo que desee el
+club pero en primera instancia se va a manejar asi la pagina la puede editar solo administracion 
+y el presidente de cada una de las ligas.
+
+-esta pagina va a soportar la subida de imagenes de logos de equipos, transmisiones en vivo,
+deberia ser apliable es decir si la creo con solo tres deportes y el dia de manana se le 
+va a agregar otro se le pueda agregar sin ningun tipo de problema.
+
+-A esta pagina se le va a acceder mediante un login el cual sera su numero de accion y su clave.
+
+-Esta pagina va reflejada mas hacia el lado deportivo mas que el simplemenete informarivo. 
+
+
+
+
+
