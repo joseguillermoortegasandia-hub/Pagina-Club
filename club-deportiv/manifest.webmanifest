@@ -1,0 +1,10 @@
+{
+  "name": "Club Deportivo Portal",
+  "short_name": "Club Deportivo",
+  "start_url": "./index.html#/inicio",
+  "display": "standalone",
+  "background_color": "#061f38",
+  "theme_color": "#06294a",
+  "description": "Portal deportivo para socios, ligas, equipos, torneos y transmisiones en vivo.",
+  "icons": []
+}
