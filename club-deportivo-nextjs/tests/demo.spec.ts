@@ -1,0 +1,3 @@
+import { test, expect } from '@playwright/test';
+test('portal demo carga en desktop y móvil',async({page})=>{await page.goto('/');await expect(page.getByText('¡Bienvenido de vuelta!')).toBeVisible();await page.getByRole('link',{name:/Deportes/}).first().click();await expect(page.getByRole('heading',{name:/Deportes/})).toBeVisible();});
+test('login demo acepta las credenciales de muestra',async({page})=>{await page.goto('/login');await page.getByLabel('Número de acción').fill('12345');await page.getByLabel('Contraseña').fill('demo123');await page.getByRole('button',{name:'Ingresar'}).click();await expect(page).toHaveURL(/\/$/);});

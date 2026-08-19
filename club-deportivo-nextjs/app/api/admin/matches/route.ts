@@ -1,0 +1,4 @@
+import { NextResponse } from 'next/server';
+import { getApiActor } from '@/lib/api-auth';
+import { createClient } from '@/lib/supabase/server';
+export async function POST(request:Request){const auth=await getApiActor();if('error'in auth)return NextResponse.json({error:auth.error},{status:auth.status});const body=await request.json();if(!body.id)return NextResponse.json({error:'Selecciona un partido.'},{status:400});const supabase=await createClient();const patch:any={status:body.status||'finished'};if(body.home_score!=='')patch.home_score=Number(body.home_score);if(body.away_score!=='')patch.away_score=Number(body.away_score);const {data,error}=await supabase.from('matches').update(patch).eq('id',body.id).select().single();if(error)return NextResponse.json({error:error.message},{status:400});return NextResponse.json({ok:true,match:data});}

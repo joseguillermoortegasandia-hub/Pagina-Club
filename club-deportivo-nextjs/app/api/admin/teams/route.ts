@@ -1,0 +1,5 @@
+import { NextResponse } from 'next/server';
+import { getApiActor } from '@/lib/api-auth';
+import { createClient } from '@/lib/supabase/server';
+import { slugify } from '@/lib/format';
+export async function POST(request:Request){const auth=await getApiActor();if('error'in auth)return NextResponse.json({error:auth.error},{status:auth.status});const body=await request.json();if(!body.name||!body.sport_id||!body.league_id)return NextResponse.json({error:'Nombre, deporte y liga son obligatorios.'},{status:400});const supabase=await createClient();const {data,error}=await supabase.from('teams').insert({name:String(body.name).trim(),slug:slugify(String(body.slug||body.name)),short_name:body.short_name||null,sport_id:body.sport_id,league_id:body.league_id,category:body.category||null,coach_name:body.coach_name||null,logo_url:body.logo_url||null,primary_color:body.primary_color||'#06294a',secondary_color:body.secondary_color||'#4fbe2f'}).select().single();if(error)return NextResponse.json({error:error.message},{status:400});return NextResponse.json({ok:true,team:data});}

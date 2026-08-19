@@ -1,0 +1,18 @@
+CLUB DEPORTIVO · NEXT.JS
+
+1) Abre esta carpeta completa en VS Code.
+2) Instala Node.js 20.9+.
+3) Terminal: npm install
+4) Copia .env.example a .env.local
+5) Para ver la demo: deja NEXT_PUBLIC_DEMO_MODE=true y ejecuta npm run dev
+6) Abre http://localhost:3000
+7) Demo: acción 12345 / clave demo123
+8) Para producción sigue CHECKLIST_VENTA.md sin saltarte pasos.
+
+ANTES DE VENDER:
+npm run typecheck
+npm run lint
+npm run build
+npx playwright install
+npm run test:e2e
+npm run preflight

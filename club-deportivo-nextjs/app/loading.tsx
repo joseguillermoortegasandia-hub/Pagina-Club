@@ -1,0 +1,1 @@
+export default function Loading(){return <div style={{minHeight:'60vh',display:'grid',placeItems:'center'}}><div style={{textAlign:'center'}}><div style={{fontSize:42}}>⚽</div><p>Cargando información del club…</p></div></div>}

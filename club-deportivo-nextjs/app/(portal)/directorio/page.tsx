@@ -1,0 +1,3 @@
+import { getDirectory } from '@/lib/data';
+export const metadata={title:'Directorio'};
+export default async function DirectoryPage(){const people=await getDirectory();return <div className="page"><div className="page-head"><div className="page-title"><h1>♧ Directorio</h1><p>Contactos de administración y responsables deportivos.</p></div></div><div className="directory-grid">{people.map((p:any)=><article className="card contact-card" key={p.id}><span className="avatar">{(p.name||p.full_name||'C').slice(0,1)}</span><div><h3>{p.name||p.full_name}</h3><p>{p.position||p.role_label}</p><p>{p.email}</p><p>{p.phone}</p></div></article>)}</div></div>}
