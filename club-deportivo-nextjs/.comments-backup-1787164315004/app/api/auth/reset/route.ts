@@ -18,5 +18,5 @@ export async function POST(request: Request) {
       }
     }
   } catch (error) { console.error(error); }
-  return NextResponse.json({ok:true}); 
+  return NextResponse.json({ok:true}); // respuesta deliberadamente genérica para evitar enumerar cuentas
 }

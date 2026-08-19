@@ -14,7 +14,7 @@ export async function createClient() {
         try {
           cookiesToSet.forEach(({ name, value, options }) => cookieStore.set(name, value, options));
         } catch {
-          
+          // Puede ocurrir durante render de Server Components. La sesión se refresca en rutas/acciones.
         }
       }
     }

@@ -1,7 +1,7 @@
-
-
-
-
+-- ============================================================
+-- DATOS INICIALES / DEMO DEL CLUB
+-- Ejecutar DESPUÉS de schema.sql
+-- ============================================================
 
 insert into public.clubs(id,name,slug,since,primary_color,accent_color,timezone)
 values ('11111111-1111-1111-1111-111111111111','Club Deportivo','club-deportivo','1945','#06294a','#4fbe2f','America/Caracas')
@@ -103,4 +103,4 @@ insert into public.streams(id,club_id,match_id,league_id,title,provider,external
 ('90000000-0000-0000-0000-000000000001','11111111-1111-1111-1111-111111111111','60000000-0000-0000-0000-000000000004','30000000-0000-0000-0000-000000000001','Los Leones vs Atlético del Valle','hls','https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8','active',523)
 on conflict (id) do update set title=excluded.title,external_url=excluded.external_url,status=excluded.status;
 
-
+-- Nota: seed.sql NO crea usuarios de Auth. Sigue database/first-admin.sql.
